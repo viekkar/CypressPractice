@@ -14,7 +14,7 @@ describe('End to End ecommerce test',function(){
     it('Submit Order',function(){
 
 
-        this.homePage.goTo('https://rahulshettyacademy.com/loginpagePractise/')
+        cy.visit(this.data.url)
         const productPage=this.homePage.login(this.data.username,this.data.password)
         productPage.pageValidation()
         productPage.verifyCardLimit().should('have.length',4)
